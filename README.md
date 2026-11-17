@@ -49,3 +49,7 @@ The deck is published at `https://<username>.github.io/<repo-name>/` and the not
 To build locally: `python build.py`, then open `dist/index.html`.
 
 Design and plumbing lifted from the polyglot programming deck.
+
+# HacKSU Computer Vision Lesson
+Learn all about how computer vision works, how computer process images, and the different methods of detection that computers have used through the ages.
+
