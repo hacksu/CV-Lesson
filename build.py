@@ -6,6 +6,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DIST_DIR = os.path.join(BASE_DIR, 'dist')
 
 PAGES = ['index.html', 'notes.html']
+BASE_URL = os.getenv('BASE_URL', '/CV-Lesson')
 
 
 def build():
