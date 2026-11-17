@@ -4,10 +4,10 @@ model = YOLO("yolo11n.pt")  #smallest model, downloads automatically on first ru
 
 results = model("cat.jpg")  #path to your photo
 
-# Save the annotated image (box + label + confidence)
+#Save the annotated image (box + label + confidence)
 results[0].save(filename="cat_detected.jpg")
 
-# Print the raw detections
+#Print the raw detections
 for box in results[0].boxes:
     cls = model.names[int(box.cls)]
     conf = float(box.conf)

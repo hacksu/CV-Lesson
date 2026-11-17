@@ -4,7 +4,7 @@ import mediapipe as mp
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
 
-# Define standard 21-point hand skeleton connections
+#Define standard 21-point hand skeleton connections
 HAND_CONNECTIONS = [
     (0, 1), (1, 2), (2, 3), (3, 4),        # Thumb
     (0, 5), (5, 6), (6, 7), (7, 8),        # Index finger
@@ -17,14 +17,14 @@ HAND_CONNECTIONS = [
 def draw_landmarks(frame, detection_result):
     h, w, c = frame.shape
     for hand_landmarks in detection_result.hand_landmarks:
-        # Convert normalized coordinates (0.0 to 1.0) to pixel coordinates
+        # onvert normalized coordinates (0.0 to 1.0) to pixel coordinates
         points = [(int(lm.x * w), int(lm.y * h)) for lm in hand_landmarks]
 
-        # Draw skeleton lines
+        #Draw skeleton lines
         for start_idx, end_idx in HAND_CONNECTIONS:
             cv2.line(frame, points[start_idx], points[end_idx], (0, 255, 0), 2)
 
-        # Draw joint dots
+        #Draw joint dots
         for point in points:
             cv2.circle(frame, point, 5, (0, 0, 255), -1)
     return frame
@@ -39,7 +39,7 @@ options = vision.HandLandmarkerOptions(
     min_tracking_confidence=0.5
 )
 
-# 2. Start webcam capture
+#Start webcam capture
 cap = cv2.VideoCapture(1, cv2.CAP_V4L2)
 print("Camera opened:", cap.isOpened())
 
@@ -49,20 +49,20 @@ with vision.HandLandmarker.create_from_options(options) as landmarker:
         if not ret:
             break
 
-        # Flip horizontally for a natural mirror view and convert BGR to RGB
+        #Flip horizontally for a natural mirror view and convert BGR to RGB
         frame = cv2.flip(frame, 1)
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb_frame)
 
-        # Pass a monotonically increasing timestamp in milliseconds
+        #Pass a monotonically increasing timestamp in milliseconds
         timestamp_ms = int(time.time() * 1000)
         result = landmarker.detect_for_video(mp_image, timestamp_ms)
 
-        # Draw detections and display
+        #Draw detections and display
         frame = draw_landmarks(frame, result)
         cv2.imshow("MediaPipe Hand Detection", frame)
 
-        # Press 'q' to quit
+        #Press 'q' to quit
         if cv2.waitKey(1) & 0xFF == ord("q"):
             break
 
