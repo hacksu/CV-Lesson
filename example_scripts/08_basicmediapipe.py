@@ -40,7 +40,9 @@ options = vision.HandLandmarkerOptions(
 )
 
 #Start webcam capture
-cap = cv2.VideoCapture(1, cv2.CAP_V4L2)
+# for i in range(
+# cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
+cap = cv2.VideoCapture(0)
 print("Camera opened:", cap.isOpened())
 
 with vision.HandLandmarker.create_from_options(options) as landmarker:
