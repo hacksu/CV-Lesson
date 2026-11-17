@@ -51,5 +51,25 @@ To build locally: `python build.py`, then open `dist/index.html`.
 Design and plumbing lifted from the polyglot programming deck.
 
 # HacKSU Computer Vision Lesson
-Learn all about how computer vision works, how computer process images, and the different methods of detection that computers have used through the ages.
+Learn all about how computer vision works, how computer process images, and the different methods of detection that computers have used through the ages. We will cover topics on image preprocessing, classical computer vision solutions such as edge detection, and more modern solutions using Convolutional Neural Networks.
+
+## Package Installation
+The lesson uses uv:
+
+bash
+```
+uv init
+uv add opencv-python numpy ultralytics
+```
+
+Or with plain pip:
+
+bash
+```
+pip install opencv-python numpy ultralytics
+```
+
+The first run of the YOLO script downloads the yolo11n.pt model weights automatically, this can take some time as the weights a little large.
+
+
 

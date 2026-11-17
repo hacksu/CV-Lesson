@@ -5,4 +5,5 @@ env/
 *.py[cod]
 dist/
 .DS_Store
-actual_templates
+actual_templates\
+uv.lock

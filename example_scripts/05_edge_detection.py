@@ -4,7 +4,7 @@
 import cv2
 
 #Read Image
-image = cv2.imread("cat.jpg")
+image = cv2.imread("computer.jpg")
 
 #Convert image to grayscale for edge detection
 #Grays work far better as edges are based on lighting differences.
