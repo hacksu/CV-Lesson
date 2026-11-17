@@ -1,0 +1,48 @@
+<div class="slide" id="slide-3">
+  <div class="slide-header">
+    <span class="tag">2 - Preprocessing</span>
+    <img src="static/HacKSU.png" alt="Logo" style="height:22px; vertical-align:middle; opacity:0.92;">
+  </div>
+  <div class="slide-body">
+    <h2>Color Masking</h2>
+    <div style="margin-top:24px; line-height:1.8; color:#888;">
+      <p>
+        First we need to understand how a computer see's an image. At its core, an image is just a large array of numbers, representing the location and content of each pixel.
+      </p>
+    </div>
+
+    <div style="margin-top:24px; line-height:1.8; color:#888;">
+      <p>
+        Images are stored in an array of <em>(H, W, Chan_Vals)</em>
+      </p>
+    </div>
+
+    <div style="margin-top:24px; line-height:1.8; color:#888;">
+      <p>
+        Using code like this we can see what one of these arrays might look like
+        <pre>
+  import cv2
+
+  #Read the image (Open CV loads images in B,G,R color format)
+  image_bgr = cv2.imread("cat.jpg")
+
+  print(f"{image_bgr}")
+        </pre>
+
+        <pre>
+  [[[202 196 183]
+  [202 196 183]
+  [202 196 183]
+  ...
+  [186 180 167]
+  [186 180 167]
+  [186 180 167]]
+        </pre>
+      </p>
+    </div>
+
+    <div class="info-bar" style="margin-top:22px;">
+      <span class="hl-amber">Note:</span> Channel values are typically [R, G B] or [R, G, B, A], printout is truncated by OpenCV
+    </div>
+  </div>
+</div>

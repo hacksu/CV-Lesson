@@ -1,0 +1,40 @@
+<div class="slide" id="slide-6">
+  <div class="slide-header">
+    <span class="tag">05 - Interpolation</span>
+    <img src="static/HacKSU.png" alt="Logo" style="height:22px; vertical-align:middle; opacity:0.92;">
+  </div>
+  <div class="slide-body">
+    <h2>Interpolation Types</h2>
+    <div style="margin-top:24px; line-height:1.8; color:#888;">
+      <p>
+        When we resize an image, the computer has to generate new pixels to fit the new aspect ratio. This is done through interpolation which estimates values in a known range. There are a few ways to handle interpolation demonstrated below
+      </p>
+    </div>
+    <div class="three-col" style="margin-top:24px;">
+      <div class="box">
+        <h3>Nearest Neighbor</h3>
+        <p style="margin-top:8px; line-height:1.6; color:#888;">
+          Blocky but Fast
+        </p>
+        <img src="../../static/nearest_neighbor.png" style="width: 450px;">
+      </div>
+      <div class="box">
+        <h3>BiLiniear</h3>
+        <p style="margin-top:8px; line-height:1.6; color:#888;">
+          Smooth but lost quality
+        </p>
+        <img src="../../static/bi_linear.png" style="width: 450px;">
+      </div>
+      <div class="box">
+        <h3>BiCubic</h3>
+        <p style="margin-top:8px; line-height:1.6; color:#888;">
+          Slow but smooth
+        </p>
+        <img src="../../static/bi_cubic.png" style="width: 450px;">
+      </div>
+    </div>
+    <div class="info-bar" style="margin-top:22px;">
+      <span class="hl-amber">Note:</span> Set custom interpolation with OpenCV
+    </div>
+  </div>
+</div>

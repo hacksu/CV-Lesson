@@ -1,0 +1,22 @@
+<div class="slide" id="slide-3">
+  <div class="slide-header">
+    <span class="tag">04 - How Does CV Work</span>
+    <img src="static/HacKSU.png" alt="Logo" style="height:22px; vertical-align:middle; opacity:0.92;">
+  </div>
+  <div class="slide-body">
+    <h2>Stacked Kernels</h2>
+    <div style="margin-top:24px; line-height:1.8; color:#888;">
+      <p>
+        To improve accuracy, models began implementing multiple levels of convolution using differently weighted kernels. These feature maps each attempt to detect a specific feature and build off of each other into more abstract concepts. While a early feature may still only detect edges and corners, future layers may use that information to detect a body, and then a face and eyes off of the body. 
+      </p>
+    </div>
+
+    <div style="margin-top:24px; line-height:1.8; color:#888;">
+      <p>
+        This stacked feature heirarchy can be expanded on to add more functionality to these models. Once a model can tell that a body is in the picture, it can also attempt to track that bodies movement by generating and tracking landmarks on the body.
+     </p>
+    </div>
+
+    <img src="../../static/FeatureLayers.png" style="width: 450px;">
+  </div>
+</div>

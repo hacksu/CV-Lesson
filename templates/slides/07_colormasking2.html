@@ -1,0 +1,34 @@
+<div class="slide" id="slide-3">
+  <div class="slide-header">
+    <span class="tag">2 - Preprocessing</span>
+    <img src="static/HacKSU.png" alt="Logo" style="height:22px; vertical-align:middle; opacity:0.92;">
+  </div>
+  <div class="slide-body">
+    <h2>Color Masking</h2>
+    <div style="margin-top:24px; line-height:1.8; color:#888;">
+      <p>
+        We can also look at other types of image data using OpenCV, such as the size or datatype being stored in the image
+      </p>
+    </div>
+
+    <div style="margin-top:24px; line-height:1.8; color:#888;">
+        <pre>
+  import cv2
+
+  #Read the image (Open CV loads images in B,G,R color format)
+  image_bgr = cv2.imread("cat.jpg")
+
+  print(f"{image_bgr}")
+        </pre>
+
+        <pre>
+  (1000, 944, 3)
+  uint8
+        </pre>
+    </div>
+
+    <div class="info-bar" style="margin-top:22px;">
+      <span class="hl-amber">Note:</span> uint8 = unsigned 8 bit integer. Each pixel takes 3 bytes in this picture.
+    </div>
+  </div>
+</div>

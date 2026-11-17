@@ -1,0 +1,34 @@
+<div class="slide" id="slide-3">
+  <div class="slide-header">
+    <span class="tag">2 - Preprocessing</span>
+    <img src="static/HacKSU.png" alt="Logo" style="height:22px; vertical-align:middle; opacity:0.92;">
+  </div>
+  <div class="slide-body">
+    <h2>Gray Scaling</h2>
+    <div style="margin-top:24px; line-height:1.8; color:#888;">
+      <p>
+        Depending on the Computer Vision task, another preprocessing step we can take is the complete removal of the color channels. By passing each pixels color values through a function we can convert each pixel to a different brightness shade of gray. While this does lose data, it also shrinks the image size and can be useful for certain tasks that do not rely on color and only use brightness, such as edge detection.
+      </p>
+    </div>
+
+    <div style="margin-top:24px; line-height:1.8; color:#888;">
+      <p>
+        Using OpenCV's cvtColor function we can quickly change the entire image
+      </p>
+        <pre>
+#Convert the Image to a grayscale
+#Use BGR to Gray to match imread
+gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+        </pre>
+    </div>
+
+    <div style="display: flex; justify-content: space-between;">
+      <img src="../../static/cat.jpg" style="width: 450px;">
+    
+      <img src="../../static/gray_cat.png" style="width: 450px;">
+    </div>
+    <div class="info-bar" style="margin-top:22px;">
+      <span class="hl-amber">Note:</span> Function for conversion weights colors differently based on human eye sensitivity. Grayscale is 1/3 the size original
+    </div>
+  </div>
+</div>

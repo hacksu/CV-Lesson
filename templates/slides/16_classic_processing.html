@@ -1,0 +1,30 @@
+<div class="slide" id="slide-3">
+  <div class="slide-header">
+    <span class="tag">04 - How Does CV Work</span>
+    <img src="static/HacKSU.png" alt="Logo" style="height:22px; vertical-align:middle; opacity:0.92;">
+  </div>
+  <div class="slide-body">
+    <h2>Classical Processing</h2>
+    <div class="box" style="margin-top:24px; line-height:1.8; color:#888;">
+      <h3>Features</h3>
+      <p>A feature is a piece of information in an image that implies a point of interest. Features help classical CV tools detect objects in images without knowing what an image is.</p>
+    </div>
+
+    <div style="margin-top:24px; line-height:1.8; color:#888;">
+      <p>
+        Classical processing largely focuses on finding and describing features in an image. This is typically accomplished using kernels to analyze the contents of an image.
+      </p>
+    </div>
+
+    <div class="box" style="margin-top:24px; line-height:1.8; color:#888;">
+      <h3>Kernels</h3>
+      <p>A Kernel is a matrix of weights (typically 3x3) that slides over an image. At each pixel you sum pixel value * weight and assign that value to the center pixel. This allows you to describe changes in the image over a set of pixels.</p>
+    </div>
+
+    <img src="https://opencv.org/wp-content/uploads/2025/04/RGB-format-10.png" style="width: 500px;">
+
+    <div class="info-bar" style="margin-top:22px;">
+      <span class="hl-amber">Note:</span> The process of moving a Kernel over an image is called convolution
+    </div>
+  </div>
+</div>
